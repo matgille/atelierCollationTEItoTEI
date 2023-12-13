@@ -5,9 +5,7 @@
       <titleStmt>
         <title><foreign>Regimiento de los príncipes</foreign>, manuscrit~B</title>
       </titleStmt>
-      <publicationStmt>
-        <p>Transcription individuelle graphémique.</p>
-      </publicationStmt>
+      <publicationStmt xml:id="e2yClVK"/>
       <sourceDesc>
         <listPerson type="possesseurs">
           <person sortKey="1">
@@ -15,70 +13,84 @@
           </person>
         </listPerson>
         <listWit>
-          <witness xml:id="B">Ms. 26.I.5 <origDate><hi rend="small_caps">xv</hi><hi rend="superscript">e</hi>~siècle</origDate><msDesc><msIdentifier xml:lang="es"><country>Espagne</country><settlement>Madrid</settlement><repository>Instituto Valencia de
-                                    don Juan</repository><idno>ms. 26.I.5</idno><msName>B</msName></msIdentifier><msContents><p><title>Regimiento</title> complet.</p></msContents><physDesc><p xml:id="qFBZxHf"/><objectDesc form="codex"><supportDesc><support>Manuscrit en <material type="papier">papier</material>.</support><extent><dimensions scope="all" type="leaf" unit="cm"><height>34</height><width>24.3</width></dimensions><dimensions scope="column" type="leaf" unit="cm"><height>24.4</height><width>7.8</width></dimensions><measure unit="folios" quantity="336">10 + 336</measure></extent><foliation ana="#folioté" xml:id="w4RuuoA"/></supportDesc><layoutDesc><layout columns="2"><p>Écrit sur deux colonnes.</p></layout></layoutDesc></objectDesc><handDesc><handNote xml:id="main_correction_1"><desc>Main de correction principale</desc></handNote></handDesc><decoDesc><p>Peu de décorations</p></decoDesc></physDesc></msDesc></witness>
+          <witness xml:id="B">Ms. 26.I.5 <origDate><hi rend="small_caps">xv</hi><hi rend="superscript">e</hi>~siècle</origDate><msDesc><msIdentifier xml:lang="es"><country>Espagne</country><settlement>Madrid</settlement><repository>Instituto Valencia de don
+                           Juan</repository><idno>ms.
+                           26.I.5</idno><msName>B</msName></msIdentifier><msContents xml:id="gtj69C7"/><physDesc><objectDesc form="codex"><supportDesc><support>Manuscrit en <material type="papier">papier</material>.</support><extent><dimensions scope="all" type="leaf" unit="cm"><height>34</height><width>24.3</width></dimensions><dimensions scope="column" type="leaf" unit="cm"><height>24.4</height><width>7.8</width></dimensions><measure unit="folios" quantity="336">10 + 336</measure></extent><foliation ana="#folioté" xml:id="oViwGS3"/></supportDesc><layoutDesc><layout columns="2" xml:id="oXMpPIw"/></layoutDesc></objectDesc><handDesc><handNote xml:id="main_correction_1"><desc>Main de correction
+                        principale</desc></handNote></handDesc><decoDesc xml:id="bgCH5GR"/></physDesc></msDesc></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
         <cRefPattern n="paragraph" matchPattern="(\w+).(\w+).(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3']/tei:div[@type='$4']/tei:p[@n='$5'])">
-          <p>This pointer pattern extracts book and part and and translation or gloss or traduction and paragraph</p>
           <!--Ajouter la hiérarchie glose vs traduction-->
         </cRefPattern>
         <cRefPattern n="glose_ou_traduction" matchPattern="(\w+).(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3']/tei:div[@type='$4'])">
-          <p>This pointer pattern extracts book and part and and translation or gloss or traduction</p>
           <!--Ajouter la hiérarchie glose vs traduction-->
         </cRefPattern>
-        <cRefPattern n="chapter" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])">
-          <p>This pointer pattern extracts book and part and chapter</p>
-        </cRefPattern>
-        <cRefPattern n="part" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2'])">
-          <p>This pointer pattern extracts book and part</p>
-        </cRefPattern>
-        <cRefPattern n="book" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
-          <p>This pointer pattern extracts book</p>
-        </cRefPattern>
+        <cRefPattern n="chapter" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])" xml:id="nXJCUef"/>
+        <cRefPattern n="part" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2'])" xml:id="wESUSTn"/>
+        <cRefPattern n="book" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])" xml:id="rrEittO"/>
       </refsDecl>
       <refsDecl>
-        <refState unit="book" xml:id="cR87lgf"/>
-        <refState unit="part" xml:id="r8kQHcb"/>
-        <refState unit="chapter" xml:id="jQ1IaBk"/>
-        <refState unit="gloss_traduction" xml:id="m9eWwzO"/>
-        <refState unit="paragraph" xml:id="gvrA6ch"/>
+        <refState unit="book" xml:id="bQRm7na"/>
+        <refState unit="part" xml:id="yhLhJr2"/>
+        <refState unit="chapter" xml:id="cADDhmA"/>
+        <refState unit="gloss_traduction" xml:id="ga0EseJ"/>
+        <refState unit="paragraph" xml:id="fclcKwj"/>
       </refsDecl>
-      <projectDesc>
-        <p>La transcription de ce témoin est manuelle.</p>
-      </projectDesc>
+      <projectDesc xml:id="fccPrc1"/>
     </encodingDesc>
   </teiHeader>
   <text>
     <body>
       <div type="livre" n="3">
         <div type="partie" n="3">
-          <div type="chapitre" n="4" xml:id="Mad_B_3_3_4">
-            <head n="OucihnEJKk">
-              <w lemma="capítulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="x3cv0wa">Capítulo</w>
-              <w lemma="4" ana="#annotation_manuelle" xml:id="exswDuI">iiii°</w>
-              <pc xml:id="hXy7Ubt">,</pc>
-              <w lemma="do" pos="RG" ana="#annotation_manuelle" xml:id="qc9GFDT">do</w>
-              <w xml:id="l9bXFAl">muestra</w>
-              <w xml:id="rFTD5Fe">quáles</w>
-              <w xml:id="fxWkjAU">e</w>
-              <w xml:id="i73gaw0">quántas</w>
-              <w xml:id="szPTzkW">cosas</w>
-              <w xml:id="fP7BeMX">deven</w>
-              <w xml:id="g0NzLDa">aver</w>
-              <w xml:id="lr5nWWU">los</w>
-              <w xml:id="cwc3W1M">buenos</w>
-              <w xml:id="eJ3YiGk">lidiadores</w>
-              <w xml:id="qracaYs">para</w>
-              <w xml:id="q2Gp7o9">que</w>
-              <w xml:id="erZYOLm">puedan</w>
-              <w xml:id="vyGS0I6">bien</w>
-              <w xml:id="d8xPFHa">lidiar</w>
-              <pc xml:id="qOYHmFL">.</pc>
-            </head>
+          <div type="chapitre" n="22" xml:id="Mad_B_3_3_22">
+            <div type="traduction">
+              <p n="JijdHudsajJ">
+                <w xml:id="vLa1vS6">Et</w>
+                <w lemma="el" pos="DA0MS0" ana="#annotation_manuelle" xml:id="a7vjtFy">el</w>
+                <w lemma="3" pos="AO0MS0" ana="#annotation_manuelle" xml:id="il9qHPx">iii°</w>
+                <w xml:id="hByd72l">es</w>
+                <w xml:id="kxe7dOE">faziendo</w>
+                <w xml:id="crtgeub">saetas</w>
+                <w xml:id="jwwmAXg">que</w>
+                <w xml:id="wHjQapo">llaman</w>
+                <space ana="#tokenisation" xml:id="ngquu68"/>
+                <w lemma="rueca" synch="#KVwFKYitEk" ana="#annotation_manuelle" xml:id="yqdzmhM">rruecas</w>
+                <pc xml:id="iaBr8id">.</pc>
+                <w xml:id="zFWQUU2">Et</w>
+                <w synch="#sfBPvEJTxj" ana="#annotation_manuelle" xml:id="p6kl8YY">éstas</w>
+                <w xml:id="h4hf9N4">son</w>
+                <w xml:id="eR2pFo9">en</w>
+                <w lemma="medio" pos="NCMS000" ana="#annotation_manuelle" xml:id="qMIqCgZ">medio</w>
+                <w lemma="hueco" pos="AQ0FP0" ana="#annotation_manuelle" xml:id="bXswill">huecas</w>
+                <pc xml:id="iPPaBRL">,</pc>
+                <w xml:id="hFB6nOv">e</w>
+                <w xml:id="jSPkQbC">allí</w>
+                <w lemma="deber" pos="VMIP3P0" ana="#annotation_manuelle" xml:id="rh7T48k">deven</w>
+                <w xml:id="v2luzlt">poner</w>
+                <w xml:id="ldp2oPZ">fuerte</w>
+                <w xml:id="jiHlG8k">fuego</w>
+                <w lemma="hacer" pos="VMP00SM" ana="#annotation_manuelle" xml:id="qJ43R4M">fecho</w>
+                <w xml:id="h534XgP">de</w>
+                <w xml:id="q7jjm5Y">olio</w>
+                <w xml:id="iMYNYke">e</w>
+                <w xml:id="rodb72X">de</w>
+                <w xml:id="k164UMj">piedra</w>
+                <w lemma="azufre" pos="NCMS000" ana="#annotation_manuelle" xml:id="mHL2048">sufre</w>
+                <pc xml:id="jzwbidJ">,</pc>
+                <w xml:id="hycIOJU">e</w>
+                <w xml:id="suebIT0">de</w>
+                <w xml:id="mvMtqNq">pez</w>
+                <pc xml:id="qPbbzLp">,</pc>
+                <w xml:id="iAE0hGn">e</w>
+                <w xml:id="paie1ox">de</w>
+                <w xml:id="lWaSQ7b">rresyna</w>
+                <pc xml:id="pevdpfT">.</pc>
+              </p>
+            </div>
           </div>
         </div>
       </div>

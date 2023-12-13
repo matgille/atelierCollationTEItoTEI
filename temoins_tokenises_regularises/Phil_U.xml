@@ -87,24 +87,24 @@
         <div type="partie" n="3">
           <div type="chapitre" n="4" xml:id="Phil_U_3_3_4">
             <head n="OucihnEJKk">
-              <w lemma="capítulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="gGdkDrp">Capítulo</w>
-              <w lemma="4" ana="#annotation_manuelle" xml:id="oyhOj02" pos="AQ0CS00">iiii°</w>
-              <w lemma="do" pos="RG" ana="#annotation_manuelle" xml:id="hlazxcH">do</w>
-              <w xml:id="eQLTmpp" lemma="mostrar" pos="VMIP3S0">muestra</w>
-              <w xml:id="s3QYzsk" lemma="cuál" pos="PT0CP000">quáles</w>
-              <w xml:id="rsO2mlm" lemma="e" pos="CC">e</w>
-              <w xml:id="rZJgKNt" lemma="cuánto" pos="PT0FP000">quántas</w>
-              <w xml:id="xeXukmO" lemma="cosa" pos="NCFP000">cosas</w>
-              <w xml:id="dfOhwhn" lemma="deber" pos="VMIP3P0">deven</w>
-              <w xml:id="pRZYOYv" lemma="haber" pos="VMN0000">aver</w>
-              <w xml:id="ob1rSxm" lemma="el" pos="DA0MP0">los</w>
-              <w xml:id="zyF9DhU" lemma="lidiador" pos="NCMP000">lidiadores</w>
-              <w xml:id="tbXY9hV" lemma="para" pos="SPS00">para</w>
-              <w xml:id="cKADcbq" lemma="que" pos="PR0CN000">que</w>
-              <w xml:id="zaugiGp" lemma="poder" pos="VMSP3P0">puedan</w>
-              <w xml:id="nXYM9gF" lemma="bien" pos="RG">bien</w>
-              <w xml:id="osThdnW" lemma="lidiar" pos="VMN0000">lidiar</w>
-              <pc xml:id="w2BxX7t" lemma="." pos="Fp">.</pc>
+              <w lemma="capítulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="wbnN6Rs">Capítulo</w>
+              <w lemma="4" ana="#annotation_manuelle" xml:id="u8m9aH4" pos="AQ0CS00">iiii°</w>
+              <w lemma="do" pos="RG" ana="#annotation_manuelle" xml:id="zUZHKmg">do</w>
+              <w xml:id="hU8VFhr" lemma="mostrar" pos="VMIP3S0">muestra</w>
+              <w xml:id="s2jvxTX" lemma="cuál" pos="PT0CP000">quáles</w>
+              <w xml:id="mte6dCM" lemma="e" pos="CC">e</w>
+              <w xml:id="fUm8f0W" lemma="cuánto" pos="PT0FP000">quántas</w>
+              <w xml:id="glMzvjx" lemma="cosa" pos="NCFP000">cosas</w>
+              <w xml:id="zMinb1M" lemma="deber" pos="VMIP3P0">deven</w>
+              <w xml:id="g647U1g" lemma="haber" pos="VMN0000">aver</w>
+              <w xml:id="jx4m4LS" lemma="el" pos="DA0MP0">los</w>
+              <w xml:id="eqhFVvS" lemma="lidiador" pos="NCMP000">lidiadores</w>
+              <w xml:id="c0pXwnG" lemma="para" pos="SPS00">para</w>
+              <w xml:id="hyvk1M8" lemma="que" pos="PR0CN000">que</w>
+              <w xml:id="eZwyfDC" lemma="poder" pos="VMSP3P0">puedan</w>
+              <w xml:id="f3WuGEC" lemma="bien" pos="RG">bien</w>
+              <w xml:id="cdgWxOE" lemma="lidiar" pos="VMN0000">lidiar</w>
+              <pc xml:id="jEAV7fn" lemma="." pos="Fp">.</pc>
             </head>
           </div>
         </div>

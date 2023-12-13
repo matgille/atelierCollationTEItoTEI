@@ -3,184 +3,160 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title><foreign>Regimiento de los príncipes</foreign>, version β,
-                                                                 manuscrit~Q.</title>
+        <title><foreign>Regimiento de los príncipes</foreign>, version β, manuscrit~Q.</title>
       </titleStmt>
-      <publicationStmt>
-        <p>Transcription individuelle graphémique.</p>
-      </publicationStmt>
+      <publicationStmt xml:id="jrbLyAe"/>
       <sourceDesc>
         <listWit>
-          <witness xml:id="Q">Ms. K.I.5 de la Bibliothèque de El Escorial.
-                                                                 <msDesc><msIdentifier xml:lang="es"><country>Espagne</country><settlement>El
-                                                                 Escorial</settlement><repository>Biblioteca de El
-                                                                 Escorial</repository><idno>ms.
-                                                                 K.I.5</idno><msName>Q</msName></msIdentifier><msContents><p><title>Regimiento</title> complet.</p></msContents><physDesc><objectDesc form="codex"><supportDesc><support><material type="papier">Papier</material></support><extent><measure quantity="157" unit="folios">I + 157 + I'</measure><dimensions scope="all" type="leaf" unit="cm"><!--Surface moyenne. Original: 96-100--><height>38</height><width>28</width></dimensions><dimensions scope="column" type="leaf" unit="cm"><height>28.8</height><width>9.8</width></dimensions></extent><foliation ana="#folioté" xml:id="aZOm4os"/><collation>Description des
-                                                                 cahiers</collation><condition>Manuscrit en bon état. Un des seuls
-                                                                 manuscrits complets de la
-                                                                 tradition.</condition></supportDesc><layoutDesc><layout columns="2"><p>Deux colonnes.</p></layout></layoutDesc></objectDesc><handDesc hands="2"><handNote xml:id="M3">Ajout postérieur. Encre très fine, bleue, semble
-                                                                 moderne</handNote><handNote xml:id="M4">Main postérieure, encore
-                                                                 plus sombre, semble d'époque proche</handNote></handDesc><decoDesc><p>Peu de décorations. Quelques lettrines. Espaces en blancs
-                                                                 laissés pour des calderons qui n'ont pas été réalisés.</p></decoDesc><bindingDesc><binding><condition>État de la
-                                                                 couverture</condition><p>Description de la couverture</p></binding></bindingDesc></physDesc><history><origin><p>Composé au <origDate>xve~siècle</origDate>. Provient de la
-                                                                 bibliothèque du Conde-Duque de Olivares, don Gaspar de
-                                                                 Guzmán.</p></origin><!--Diccionario Filológico--></history></msDesc></witness>
+          <witness xml:id="Q">Ms. K.I.5 de la Bibliothèque de El Escorial. <msDesc><msIdentifier xml:lang="es"><country>Espagne</country><settlement>El Escorial</settlement><repository>Biblioteca de El
+                  Escorial</repository><idno>ms. K.I.5</idno><msName>Q</msName></msIdentifier><msContents xml:id="jGCE4kU"/><physDesc><objectDesc form="codex"><supportDesc><support><material type="papier">Papier</material></support><extent><measure quantity="157" unit="folios">I + 157 + I'</measure><dimensions scope="all" type="leaf" unit="cm"><!--Surface moyenne. Original: 96-100--><height>38</height><width>28</width></dimensions><dimensions scope="column" type="leaf" unit="cm"><height>28.8</height><width>9.8</width></dimensions></extent><foliation ana="#folioté" xml:id="u9UTYaW"/><collation>Description des cahiers</collation><condition>Manuscrit en bon état. Un des seuls manuscrits
+                      complets de la tradition.</condition></supportDesc><layoutDesc><layout columns="2" xml:id="xJP7BLE"/></layoutDesc></objectDesc><handDesc hands="2"><handNote xml:id="M3">Ajout postérieur. Encre très fine, bleue,
+                    semble moderne</handNote><handNote xml:id="M4">Main postérieure, encore plus sombre, semble d'époque
+                    proche</handNote></handDesc><decoDesc xml:id="tVOHD3e"/><bindingDesc><binding><condition>État de la
+                    couverture</condition></binding></bindingDesc></physDesc><history><origin xml:id="mghsSbf"/><!--Diccionario Filológico--></history></msDesc></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
         <cRefPattern n="paragraph" matchPattern="(\w+).(\w+).(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3']/tei:div[@type='$4']/tei:p[@n='$5'])">
-          <p>This pointer pattern extracts book and part and chapter and
-                                                                 and translation or gloss and paragraph</p>
           <!--Ajouter la hiérarchie glose vs traduction-->
         </cRefPattern>
         <cRefPattern n="glose_ou_traduction" matchPattern="(\w+).(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3']/tei:div[@type='$4'])">
-          <p>This pointer pattern extracts book and part and chapter and
-                                                                 and translation or gloss</p>
           <!--Ajouter la hiérarchie glose vs traduction-->
         </cRefPattern>
-        <cRefPattern n="chapter" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])">
-          <p>This pointer pattern extracts book and part and chapter</p>
-        </cRefPattern>
-        <cRefPattern n="part" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2'])">
-          <p>This pointer pattern extracts book and part</p>
-        </cRefPattern>
-        <cRefPattern n="book" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
-          <p>This pointer pattern extracts book</p>
-        </cRefPattern>
+        <cRefPattern n="chapter" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])" xml:id="n4VykrK"/>
+        <cRefPattern n="part" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2'])" xml:id="skX4iNT"/>
+        <cRefPattern n="book" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])" xml:id="xmVO8LD"/>
       </refsDecl>
       <refsDecl>
-        <refState unit="book" xml:id="fbNOGng"/>
-        <refState unit="part" xml:id="jZBwWuu"/>
-        <refState unit="chapter" xml:id="ymPRLi7"/>
-        <refState unit="glose_ou_traduction" xml:id="rZ50F8L"/>
-        <refState unit="paragraph" xml:id="hygqcD6"/>
+        <refState unit="book" xml:id="gGT7p8N"/>
+        <refState unit="part" xml:id="lb993qV"/>
+        <refState unit="chapter" xml:id="mpZIXYI"/>
+        <refState unit="glose_ou_traduction" xml:id="gU4uoY4"/>
+        <refState unit="paragraph" xml:id="t5F7ZWZ"/>
       </refsDecl>
-      <projectDesc>
-        <p>Transcription manuelle</p>
-      </projectDesc>
+      <projectDesc xml:id="sNnn6p5"/>
       <charDecl>
         <char xml:id="atilde_Q">
           <desc>Latin small letter a with tilde</desc>
           <mapping type="decimal">ã</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/atilde.png" xml:id="plwZtuN"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/atilde.png" xml:id="uD9FYWi"/>
         </char>
         <char xml:id="dtilde_Q">
           <desc>Latin small letter d with tilde</desc>
           <mapping type="combining">d̃</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/dtilde.png" xml:id="n1iLNTg"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/dtilde.png" xml:id="tqXbokT"/>
         </char>
         <char xml:id="ecroch_Q">
           <desc>Latin small letter e with hook</desc>
           <mapping type="combining">ẻ</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/ttilde.png" xml:id="aRZDUFZ"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/ttilde.png" xml:id="mTVVsvC"/>
         </char>
         <char xml:id="etilde_Q">
           <desc>Latin small letter e with tilde</desc>
           <mapping type="decimal">ẽ</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/ecroch.png" xml:id="axWUxdj"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/ecroch.png" xml:id="wbzH7Dw"/>
         </char>
         <char xml:id="gbizarre_Q">
           <desc>g avec un signe bizarre dessus</desc>
           <mapping type="decimal">g̉</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/gbizarre.png" xml:id="zKl7P30"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/gbizarre.png" xml:id="xym04zZ"/>
         </char>
         <char xml:id="otilde_Q">
           <desc>Latin small letter o with tilde</desc>
           <mapping type="decimal">õ</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/otilde.png" xml:id="s8nju6S"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/otilde.png" xml:id="nT04a9J"/>
         </char>
         <char xml:id="pbarre_Q">
           <desc>Latin small letter p with stroke through descender</desc>
           <mapping type="MUFI">ꝑ</mapping>
           <mapping type="PUA">U+A751</mapping>
           <mapping type="decimal">ꝑ</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/pbarre.png" xml:id="ngtXptn"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/pbarre.png" xml:id="iRgtTeA"/>
         </char>
         <char xml:id="prond_Q">
           <desc>Latin small letter p avec rond</desc>
           <mapping type="decimal">p°</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/prond.png" xml:id="kl0aSXv"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/prond.png" xml:id="bq77UHs"/>
         </char>
         <char xml:id="qtilde_Q">
           <desc>LATIN SMALL LETTER Q WITH TILDE</desc>
           <mapping type="PUA"> U+0071 U+0303</mapping>
           <mapping type="combining">q̃</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/qtilde.png" xml:id="rNpwTSU"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/qtilde.png" xml:id="j9ohvZg"/>
         </char>
         <char xml:id="qtilde2_Q">
           <desc>LATIN SMALL LETTER Q WITH TILDE (ligaturé)</desc>
           <mapping type="PUA"> U+0071 U+0303</mapping>
           <mapping type="combining">q̃</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/qtilde2.png" xml:id="cgQXNld"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/qtilde2.png" xml:id="aMnewBF"/>
         </char>
         <char xml:id="rlong_Q">
           <desc>LATIN SMALL LETTER R WITH LONG LEG</desc>
           <mapping type="IPAExt">027C</mapping>
           <mapping type="decimal">ɼ</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/rlong.png" xml:id="pnOamMr"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/rlong.png" xml:id="eApOITC"/>
         </char>
         <char xml:id="sorne_Q">
           <desc>Latin small letter s with flourish</desc>
           <!--<mapping type="decimal">&#59575;</mapping>Pas dans l'UNICODE-->
           <mapping type="decimal">ser</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/sorne.png" xml:id="ckYv4f3"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/sorne.png" xml:id="mYZ20rN"/>
         </char>
         <char xml:id="slong_Q">
           <desc>Latin small letter long s</desc>
           <mapping type="decimal">ſ</mapping>
           <mapping type="MUFI">ſ</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/slong.png" xml:id="rHa8dNG"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/slong.png" xml:id="tyYO5sm"/>
         </char>
         <char xml:id="stilde_Q">
           <desc>Latin small letter s with tilde</desc>
           <mapping type="combining">s̃</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/stilde.png" xml:id="e2mTbOT"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/stilde.png" xml:id="mu795Bn"/>
         </char>
         <char xml:id="stilde2_Q">
-          <desc>Latin small letter s with tilde et un point
-                                                                 supérieur</desc>
+          <desc>Latin small letter s with tilde et un point supérieur</desc>
           <mapping type="combining">s̃</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/stilde2.png" xml:id="d8TmVdz"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/stilde2.png" xml:id="jijDwMk"/>
         </char>
         <char xml:id="et_Q">
           <desc>LATIN SMALL LETTER RUM ROTUNDA</desc>
           <mapping type="MUFI">ꝝ</mapping>
           <mapping type="decimal">ꝝ</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/stironien.png" xml:id="ltJY0zR"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/stironien.png" xml:id="oA7v7ak"/>
         </char>
         <char xml:id="rtilde_Q">
           <desc>Latin small letter r with tilde</desc>
           <mapping type="combining">r̃</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/rtilde.png" xml:id="eh9hNpV"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/rtilde.png" xml:id="eZ6OvBJ"/>
         </char>
         <char xml:id="ttilde_Q">
           <desc>Latin small letter t with tilde</desc>
           <mapping type="combining">t̃</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/ttilde.png" xml:id="lbqA5Hk"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/ttilde.png" xml:id="aPBHvuM"/>
         </char>
         <char xml:id="utilde_Q">
           <desc>LATIN SMALL LETTER U WITH TILDE</desc>
           <mapping type="PUA">U+0169</mapping>
           <mapping type="decimal">ũ</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/utilde.png" xml:id="pQKwPhr"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/utilde.png" xml:id="k1AGaNJ"/>
         </char>
         <char xml:id="ypoint_Q">
           <desc>LATIN SMALL LETTER Y WITH DOT ABOVE</desc>
           <mapping type="decimal">ẏ</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/ypoint.png" xml:id="dEqF4wt"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/ypoint.png" xml:id="j61ubc2"/>
         </char>
         <char xml:id="random_Q">
           <desc>Abréviation aléatoire et non catégorisable</desc>
           <mapping type="decimal">᷎</mapping>
           <!--Ogonek choisi, mais c'est pas représentatif-->
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/random.png" xml:id="zFQ0ZVT"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/random.png" xml:id="uDp7CPU"/>
         </char>
         <char xml:id="solidus_Q">
           <desc>SOLIDUS</desc>
           <mapping type="decimal">/</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/solidus.png" xml:id="w3rKh9g"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Esc_Q/solidus.png" xml:id="apWLOax"/>
         </char>
       </charDecl>
     </encodingDesc>
@@ -189,29 +165,46 @@
     <body>
       <div type="livre" n="3" xml:id="Esc_Q_3">
         <div type="partie" n="3" xml:id="Esc_Q_3_3">
-          <div type="chapitre" n="4" xml:id="Esc_Q_3_3_4">
-            <head n="OucihnEJKk">
-              <w lemma="capítulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="ivHMyEz">Capítulo</w>
-              <w lemma="4" ana="#annotation_manuelle" xml:id="iZjkBzE" pos="AQ0CS00">iiii°</w>
-              <pc xml:id="paH2dMD" lemma="," pos="Fc">,</pc>
-              <w lemma="do" pos="RG" ana="#annotation_manuelle" xml:id="jiTs1T2">do</w>
-              <w xml:id="kS5iD85" lemma="mostrar" pos="VMIP3S0">muestra</w>
-              <w xml:id="cwCqff2" lemma="cuál" pos="PT0CP000">quáles</w>
-              <w xml:id="m1UWSgF" lemma="e" pos="CC">e</w>
-              <w xml:id="gmg50XD" lemma="cuánto" pos="PT0FP000">quántas</w>
-              <w xml:id="ePXqhBc" lemma="cosa" pos="NCFP000">cosas</w>
-              <w xml:id="sf1uPti" lemma="deber" pos="VMIP3P0">deven</w>
-              <w xml:id="v1RYNJn" lemma="haber" pos="VMN0000">aver</w>
-              <w xml:id="qSQohZy" lemma="el" pos="DA0MP0">los</w>
-              <w xml:id="gzAtFEA" lemma="bueno" pos="AQ0MP0">buenos</w>
-              <w xml:id="ocGE7Pd" lemma="lidiador" pos="NCMP000">lidiadores</w>
-              <w xml:id="vweBA0c" lemma="para" pos="SPS00">para</w>
-              <w xml:id="npGatoN" lemma="que" pos="PR0CN000">que</w>
-              <w lemma="poder" pos="VMSP3S0" ana="#annotation_manuelle" xml:id="nKWjaYz">pueda</w>
-              <w xml:id="xqFOAnR" lemma="bien" pos="RG">bien</w>
-              <w xml:id="doAsXHG" lemma="lidiar" pos="VMN0000">lidiar</w>
-              <pc xml:id="m279pAa" lemma="." pos="Fp">.</pc>
-            </head>
+          <div type="chapitre" n="22" xml:id="Esc_Q_3_3_22">
+            <div type="traduction">
+              <p n="JijdHudsajJ">
+                <w xml:id="tzpA9t4" lemma="el" pos="DA0MS0">El</w>
+                <w lemma="3" ana="#annotation_manuelle" xml:id="fXeEPZb" pos="AO0MS0">terçero</w>
+                <w xml:id="jmqIEiM" lemma="ser" pos="VSIP3S0">es</w>
+                <w xml:id="ecyWR7e" lemma="hacer" pos="VMG0000">faziendo</w>
+                <w xml:id="qgI52CZ" lemma="saeta" pos="NCFP000">saetas</w>
+                <w xml:id="bJS4XPK" lemma="que" pos="PR0CN000">que</w>
+                <w xml:id="twW0Zf2" lemma="llamar" pos="VMIP3P0">llaman</w>
+                <w synch="#KVwFKYitEk" ana="#annotation_manuelle" xml:id="yryE4rv" lemma="rueca" pos="NCFP000">ruecas</w>
+                <pc xml:id="ynd8KMl" lemma=":" pos="Fd">:</pc>
+                <w synch="#sfBPvEJTxj" ana="#annotation_manuelle" xml:id="i91p4kO" lemma="este" pos="PD0FP000">éstas</w>
+                <w xml:id="yezY8uJ" lemma="ser" pos="VSIP3P0">son</w>
+                <w xml:id="nFPF9l7" lemma="en" pos="SPS00">en</w>
+                <w lemma="medio" pos="NCMS000" ana="#annotation_manuelle" xml:id="obc4hcx">medio</w>
+                <w lemma="hueco" pos="AQ0FP0" ana="#annotation_manuelle" xml:id="dyQEzKF">huecas</w>
+                <pc xml:id="jTDE5wQ" lemma="," pos="Fc">,</pc>
+                <w xml:id="ueelVoz" lemma="e" pos="CC">e</w>
+                <w xml:id="oXrhnts" lemma="allí" pos="RG">allí</w>
+                <w lemma="deber" pos="VMIP3P0" ana="#annotation_manuelle" xml:id="ca3nBwL">deven</w>
+                <w xml:id="fh3Dwml" lemma="poner" pos="VMN0000">poner</w>
+                <w xml:id="bZuO7fA" lemma="fuerte" pos="AQ0CS0">fuerte</w>
+                <w xml:id="ffZO5oe" lemma="fuego" pos="NCMS000">fuego</w>
+                <w xml:id="g52UUdc" lemma="de" pos="SPS00">de</w>
+                <w xml:id="yeqnsYk" lemma="óleo" pos="NCMS000">olio</w>
+                <w xml:id="bPrnO5B" lemma="e" pos="CC">e</w>
+                <w xml:id="hgjjf0s" lemma="de" pos="SPS00">de</w>
+                <w xml:id="uXklmc9" lemma="piedra" pos="NCFS000">piedra</w>
+                <w lemma="azufre" pos="NCMS000" ana="#annotation_manuelle" xml:id="j4LNPm3">sufre</w>
+                <w xml:id="e1kj0UW" lemma="e" pos="CC">e</w>
+                <w xml:id="th996sw" lemma="de" pos="SPS00">de</w>
+                <w xml:id="iDqj8bS" lemma="pez" pos="NCFS000">pez</w>
+                <pc xml:id="xXf9SL6" lemma="," pos="Fc">,</pc>
+                <w xml:id="cOEKQ8H" lemma="e" pos="CC">e</w>
+                <w xml:id="vkQaVPL" lemma="de" pos="SPS00">de</w>
+                <w ana="#annotation_manuelle" xml:id="ssgFD9d" lemma="reina" pos="NCFS000">rregina</w>
+                <pc xml:id="uDo08re" lemma="." pos="Fp">.</pc>
+              </p>
+            </div>
           </div>
         </div>
       </div>

@@ -5,85 +5,88 @@
       <titleStmt>
         <title><foreign>Regimiento de los príncipes</foreign>, manuscrit~G</title>
       </titleStmt>
-      <publicationStmt>
-        <p>Transcription individuelle graphémique.</p>
-      </publicationStmt>
+      <publicationStmt xml:id="c7HSrIO"/>
       <sourceDesc>
         <listWit>
-          <witness xml:id="G" facs="https://rbdigital.realbiblioteca.es/s/realbiblioteca/item/11555">Ms.
-                                    II/215 de la Biblioteca Real <origDate><hi rend="small_caps">xv</hi><hi rend="superscript">e</hi>~siècle</origDate><msDesc><msIdentifier xml:lang="es"><country>Espagne</country><settlement>Madrid</settlement><repository>Biblioteca
-                                                      Real</repository><idno>ms. II/215</idno><msName>G</msName></msIdentifier><msContents><p><title>Regimiento</title> complet.</p></msContents><physDesc><objectDesc form="codex"><supportDesc><support>Support en
-                                                                 <material type="papier">papier</material>.</support><extent><!--<note>Selon Garretas, format original : 300*215mm</note>--><measure quantity="454" unit="folios">1 + II + 454 + 12 + III'+
-                                                                 I'</measure><dimensions scope="all" type="leaf" unit="cm"><height>27.5</height><width>21.0</width></dimensions><dimensions scope="column" type="leaf" unit="cm"><height>21.0</height><width>6.7</width></dimensions></extent><foliation ana="#folioté" xml:id="nqn3oV7"/><collation>Description des
-                                                                 cahiers</collation><condition>Selon Díez Garretas
-                                                                 <date>2003</date>, le manuscrit devait mesurer avant ré-reliure
-                                                                 275x210mm. </condition></supportDesc><layoutDesc><layout columns="2"><p>Deux colonnes, entre 32 et 40 lignes.</p></layout></layoutDesc></objectDesc><handDesc><ab xml:id="ltCwrtT"/></handDesc><decoDesc><p xml:id="ai84zp2"/></decoDesc><bindingDesc><binding><condition xml:id="mISjztn"/></binding></bindingDesc></physDesc><history><origin>Proviendrait
-                                                      de la Bibliothèque du Comte de Gondomar. Ex libris royal de l'époque de
-                                                      Carlos IV-Fernando VII.</origin></history></msDesc></witness>
+          <witness xml:id="G" facs="https://rbdigital.realbiblioteca.es/s/realbiblioteca/item/11555">Ms. II/215 de la
+                  Biblioteca Real <origDate><hi rend="small_caps">xv</hi><hi rend="superscript">e</hi>~siècle</origDate><msDesc><msIdentifier xml:lang="es"><country>Espagne</country><settlement>Madrid</settlement><repository>Biblioteca
+                           Real</repository><idno>ms.
+                           II/215</idno><msName>G</msName></msIdentifier><msContents xml:id="jPQrWQQ"/><physDesc><objectDesc form="codex"><supportDesc><support>Support en <material type="papier">papier</material>.</support><extent><!--<note>Selon Garretas, format original : 300*215mm</note>--><measure quantity="454" unit="folios">1 + II + 454 + 12 + III'+ I'</measure><dimensions scope="all" type="leaf" unit="cm"><height>27.5</height><width>21.0</width></dimensions><dimensions scope="column" type="leaf" unit="cm"><height>21.0</height><width>6.7</width></dimensions></extent><foliation ana="#folioté" xml:id="jhOEKTs"/><collation>Description des cahiers</collation><condition>Selon Díez Garretas <date>2003</date>,
+                                 le manuscrit devait mesurer avant ré-reliure 275x210mm.
+                                 </condition></supportDesc><layoutDesc><layout columns="2" xml:id="r6TCptt"/></layoutDesc></objectDesc><handDesc><ab xml:id="j3zlJyu"/></handDesc><decoDesc xml:id="uusynUc"/><bindingDesc><binding><condition xml:id="k2dhPNj"/></binding></bindingDesc></physDesc><history><origin>Proviendrait
+                           de la Bibliothèque du Comte de Gondomar. Ex libris royal de l'époque de Carlos IV-Fernando
+                           VII.</origin></history></msDesc></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
         <cRefPattern n="paragraph" matchPattern="(\w+).(\w+).(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3']/tei:div[@type='$4']/tei:p[@n='$5'])">
-          <p>This pointer pattern extracts book and part and and translation or gloss or traduction and
-                                    paragraph</p>
           <!--Ajouter la hiérarchie glose vs traduction-->
         </cRefPattern>
         <cRefPattern n="glose_ou_traduction" matchPattern="(\w+).(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3']/tei:div[@type='$4'])">
-          <p>This pointer pattern extracts book and part and and translation or gloss or traduction</p>
           <!--Ajouter la hiérarchie glose vs traduction-->
         </cRefPattern>
-        <cRefPattern n="chapter" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])">
-          <p>This pointer pattern extracts book and part and chapter</p>
-        </cRefPattern>
-        <cRefPattern n="part" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2'])">
-          <p>This pointer pattern extracts book and part</p>
-        </cRefPattern>
-        <cRefPattern n="book" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
-          <p>This pointer pattern extracts book</p>
-        </cRefPattern>
+        <cRefPattern n="chapter" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])" xml:id="nwXWy0R"/>
+        <cRefPattern n="part" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2'])" xml:id="tHQh9TC"/>
+        <cRefPattern n="book" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])" xml:id="nJue92N"/>
       </refsDecl>
       <refsDecl>
-        <refState unit="book" xml:id="cNrSJkK"/>
-        <refState unit="part" xml:id="j9rsihR"/>
-        <refState unit="chapter" xml:id="zsTLDkv"/>
-        <refState unit="gloss_traduction" xml:id="aXiAAWa"/>
-        <refState unit="paragraph" xml:id="erbm1XM"/>
+        <refState unit="book" xml:id="y26US17"/>
+        <refState unit="part" xml:id="mI1J7Xv"/>
+        <refState unit="chapter" xml:id="sjJXIDY"/>
+        <refState unit="gloss_traduction" xml:id="djkgNmS"/>
+        <refState unit="paragraph" xml:id="i88sTkn"/>
       </refsDecl>
-      <projectDesc>
-        <p>Transcription manuelle</p>
-      </projectDesc>
+      <projectDesc xml:id="jgXKDD7"/>
     </encodingDesc>
   </teiHeader>
   <text>
     <body>
       <div type="livre" n="3">
         <div type="partie" n="3">
-          <pb facs="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/Mad_G/pg_0001.pdf" n="409v" break="yes" xml:id="wJCLKlM"/>
-          <pb facs="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/Mad_G/pg_0004.pdf" n="409v" break="yes" xml:id="gozL0lx"/>
-          <div type="chapitre" n="4" xml:id="Mad_G_3_3_4">
-            <head n="OucihnEJKk">
-              <w lemma="capítulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="g6S0HLe">Capítulo</w>
-              <w lemma="4" ana="#annotation_manuelle" xml:id="u8jaioB">iiii°</w>
-              <w lemma="do" pos="RG" ana="#annotation_manuelle" xml:id="ntHQIRJ">do</w>
-              <w xml:id="rJxUdE5">muestra</w>
-              <w xml:id="sboM6pG">quáles</w>
-              <w xml:id="xL0Y58w">e</w>
-              <w xml:id="aR9zkPH">quántas</w>
-              <w xml:id="aXX2ijr">cosas</w>
-              <w xml:id="ma2q8L0">deven</w>
-              <w xml:id="zHiCzXQ">haver</w>
-              <w xml:id="jKzJvjQ">los</w>
-              <w xml:id="eGqjT0B">buenos</w>
-              <w xml:id="uRVe0nv">lidiadores</w>
-              <w xml:id="th9JFbs">para</w>
-              <w xml:id="y1ANQg5">que</w>
-              <w xml:id="iWrE0gd">puedan</w>
-              <w xml:id="uPZVRWL">bien</w>
-              <w xml:id="sfhl3ym">lidiar</w>
-              <pc xml:id="hVmBqLM">.</pc>
-            </head>
+          <pb facs="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/Mad_G/pg_0001.pdf" n="409v" break="yes" xml:id="a45bqHQ"/>
+          <pb facs="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/Mad_G/pg_0004.pdf" n="409v" break="yes" xml:id="n3s2hMu"/>
+          <div type="chapitre" n="22" xml:id="Mad_G_3_3_22">
+            <div type="traduction">
+              <p n="JijdHudsajJ">
+                <w xml:id="whTXIKF">El</w>
+                <w lemma="3" pos="AO0MS0" ana="#annotation_manuelle" xml:id="iNbGqRt">iii°</w>
+                <w xml:id="u8dZOpj">es</w>
+                <w xml:id="lGm6vaV">faziendo</w>
+                <w xml:id="ovJSMQi">saetas</w>
+                <w xml:id="mb7mMsv">que</w>
+                <w xml:id="hlLEDrD">a</w>
+                <w xml:id="hDOAXV4">manera</w>
+                <w xml:id="t26j4Es">de</w>
+                <w synch="#KVwFKYitEk" ana="#annotation_manuelle" xml:id="cQv4nVD">ruecas</w>
+                <w synch="#sfBPvEJTxj" ana="#annotation_manuelle" xml:id="zQCKizT">están</w>
+                <w xml:id="p5rHJX7">en</w>
+                <w lemma="medio" pos="NCMS000" ana="#annotation_manuelle" xml:id="sstlhaT">medio</w>
+                <w lemma="hueco" pos="AQ0FP0" ana="#annotation_manuelle" xml:id="slCS0Kn">huecas</w>
+                <pc xml:id="bSo0hVT">.</pc>
+                <w xml:id="mOFC8Tt">Et</w>
+                <w xml:id="xz09SZe">allí</w>
+                <w lemma="deber" pos="VMIP3P0" ana="#annotation_manuelle" xml:id="mNHMjks">deven</w>
+                <w xml:id="vkEh7TH">poner</w>
+                <w xml:id="eGQrmbC">fuerte</w>
+                <w xml:id="jWYx1OD">fuego</w>
+                <w lemma="hacer" pos="VMP00SM" ana="#annotation_manuelle" xml:id="cSy77fj">fecho</w>
+                <w xml:id="jXdTEgy">de</w>
+                <w xml:id="yJr5iJk">olio</w>
+                <w xml:id="eLQqx0O">e</w>
+                <w xml:id="fNeL8gH">de</w>
+                <w xml:id="eIC5TyP">piedra</w>
+                <w lemma="azufre" pos="NCMS000" ana="#annotation_manuelle" xml:id="kCa2jRQ">sufre</w>
+                <w xml:id="m74RshA">e</w>
+                <w xml:id="mcUnRDf">de</w>
+                <w xml:id="jVd2Ax6">pez</w>
+                <w xml:id="puEp9WD">e</w>
+                <w xml:id="r5Go7DF">de</w>
+                <w xml:id="iRsroJs">resina</w>
+                <pc xml:id="eQXMR6X">.</pc>
+              </p>
+            </div>
           </div>
         </div>
       </div>

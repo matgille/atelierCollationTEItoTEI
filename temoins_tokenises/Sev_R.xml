@@ -5,104 +5,92 @@
       <titleStmt>
         <title><foreign>Regimiento de los príncipes</foreign>: manuscrit~R de Séville</title>
       </titleStmt>
-      <publicationStmt>
-        <p>Transcription individuelle graphémique.</p>
-      </publicationStmt>
+      <publicationStmt xml:id="unr8vCE"/>
       <sourceDesc>
         <listWit>
-          <witness xml:id="R" facs="https://archive.org/details/A332131">Ms. 332/131 de la Bibliothèque Universitaire de
-                        Séville. <msDesc><msIdentifier xml:lang="es"><country>Espagne</country><settlement>Seville</settlement><repository>Biblioteca
-                                    Universitaria de Sevilla</repository><idno>ms. 332/131</idno><msName>R</msName></msIdentifier><msContents><p><title>Regimiento</title> complet.</p></msContents><physDesc><objectDesc form="codex"><supportDesc><support><material type="papier">Papier</material></support><extent><measure unit="folios" quantity="299">9 +
-                                                299</measure><dimensions scope="all" type="leaf" unit="cm"><height>29.7</height><width>21.2</width></dimensions><dimensions scope="column" unit="cm"><height>21.0</height><width>6.8</width></dimensions></extent><foliation ana="#folioté">Quelques erreurs de foliation, à partir du folio xxx, oubli d'une
-                                            dizaine.</foliation><collation>Description des cahiers</collation><condition>Bref
-                                            résumé de l'état du Manuscrit et des pages qui
-                                            manquent</condition></supportDesc><layoutDesc><layout columns="2"><p>Deux colonnes.</p></layout></layoutDesc></objectDesc><handDesc cert="medium" hands="5"><p>Jusqu'à cinq mains.</p></handDesc><decoDesc><p>Décorations minimes.</p></decoDesc></physDesc><history><origin><p>Daté du<origDate><hi rend="small_caps">xv</hi><hi rend="superscript">e</hi>~siècle</origDate></p>
-                                     .
-                                    <p cert="medium">Appartient au <persName>Marquis de Tarifa</persName>?</p></origin><!---Diccionario Filológico--></history></msDesc></witness>
+          <witness xml:id="R" facs="https://archive.org/details/A332131">Ms. 332/131 de la
+                                                Bibliothèque Universitaire de Séville. <msDesc><msIdentifier xml:lang="es"><country>Espagne</country><settlement>Seville</settlement><repository>Biblioteca
+                                                                 Universitaria de Sevilla</repository><idno>ms.
+                                                                 332/131</idno><msName>R</msName></msIdentifier><msContents xml:id="ePDR3NJ"/><physDesc><objectDesc form="codex"><supportDesc><support><material type="papier">Papier</material></support><extent><measure unit="folios" quantity="299">9 + 299</measure><dimensions scope="all" type="leaf" unit="cm"><height>29.7</height><width>21.2</width></dimensions><dimensions scope="column" unit="cm"><height>21.0</height><width>6.8</width></dimensions></extent><foliation ana="#folioté">Quelques erreurs de foliation, à partir du folio
+                                                                 xxx, oubli d'une dizaine.</foliation><collation>Description des
+                                                                 cahiers</collation><condition>Bref résumé de l'état du Manuscrit
+                                                                 et des pages qui
+                                                                 manquent</condition></supportDesc><layoutDesc><layout columns="2" xml:id="vvMDvd7"/></layoutDesc></objectDesc><handDesc cert="medium" hands="5" xml:id="bvRam3D"/><decoDesc xml:id="isoWR50"/></physDesc><history><origin>.
+                                                                </origin><!---Diccionario Filológico--></history></msDesc></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
         <cRefPattern n="paragraph" matchPattern="(\w+).(\w+).(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3']/tei:div[@type='$4']/tei:p[@n='$5'])">
-          <p>This pointer pattern extracts book and part and chapter and and translation or gloss and paragraph</p>
           <!--Ajouter la hiérarchie glose vs traduction-->
         </cRefPattern>
         <cRefPattern n="glose_ou_traduction" matchPattern="(\w+).(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3']/tei:div[@type='$4'])">
-          <p>This pointer pattern extracts book and part and chapter and and translation or gloss</p>
           <!--Ajouter la hiérarchie glose vs traduction-->
         </cRefPattern>
-        <cRefPattern n="chapter" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])">
-          <p>This pointer pattern extracts book and part and chapter</p>
-        </cRefPattern>
-        <cRefPattern n="part" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2'])">
-          <p>This pointer pattern extracts book and part</p>
-        </cRefPattern>
-        <cRefPattern n="book" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
-          <p>This pointer pattern extracts book</p>
-        </cRefPattern>
+        <cRefPattern n="chapter" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])" xml:id="zOBOoam"/>
+        <cRefPattern n="part" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']/tei:div[@n='$2'])" xml:id="mZNbHU1"/>
+        <cRefPattern n="book" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])" xml:id="qTEMXNp"/>
       </refsDecl>
       <refsDecl>
-        <refState unit="book" xml:id="mfL1FIi"/>
-        <refState unit="part" xml:id="vXAHYd7"/>
-        <refState unit="chapter" xml:id="gVPSLoK"/>
-        <refState unit="gloss_traduction" xml:id="oJIQ2uk"/>
-        <refState unit="paragraph" xml:id="gsd7TUF"/>
+        <refState unit="book" xml:id="vWkk4qW"/>
+        <refState unit="part" xml:id="fAbX0xh"/>
+        <refState unit="chapter" xml:id="k7inhsF"/>
+        <refState unit="gloss_traduction" xml:id="eEDlWuD"/>
+        <refState unit="paragraph" xml:id="k2roonA"/>
       </refsDecl>
-      <projectDesc>
-        <p>Transcription manuelle</p>
-      </projectDesc>
+      <projectDesc xml:id="uygNdJk"/>
       <charDecl>
         <char xml:id="atilde_R">
           <desc>Latin small letter a with tilde</desc>
           <mapping type="decimal">ã</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Ms_R/atilde.png" xml:id="xZeN1eQ"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Ms_R/atilde.png" xml:id="pWsBa5p"/>
         </char>
         <char xml:id="etilde_R">
           <desc>Latin small letter e with tilde</desc>
           <mapping type="decimal">ẽ</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Ms_R/etilde.png" xml:id="aMWi2rv"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Ms_R/etilde.png" xml:id="krECuBW"/>
         </char>
         <char xml:id="otilde_R">
           <desc>Latin small letter o with tilde</desc>
           <mapping type="decimal">õ</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Ms_R/otilde.png" xml:id="kf26avo"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Ms_R/otilde.png" xml:id="g6wbEQQ"/>
         </char>
         <char xml:id="pbarre_R">
           <desc>Latin small letter p with stroke through descender</desc>
           <mapping type="MUFI">ꝑ</mapping>
           <mapping type="PUA">U+A751</mapping>
           <mapping type="decimal">ꝑ</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Ms_R/pbarre.png" xml:id="bYWaKFE"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Ms_R/pbarre.png" xml:id="sq9Z3Vd"/>
         </char>
         <char xml:id="qtilde_R">
           <desc>LATIN SMALL LETTER Q WITH TILDE</desc>
           <mapping type="PUA"> U+0071 U+0303</mapping>
           <mapping type="combining">q̃</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Ms_R/qtilde.png" xml:id="s5E6v9B"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Ms_R/qtilde.png" xml:id="ooRXVgF"/>
         </char>
         <char xml:id="slong_R">
           <desc>Latin small letter long s</desc>
           <mapping type="decimal">ſ</mapping>
           <mapping type="MUFI">ſ</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Ms_R/slong.png" xml:id="wrbZL4r"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Ms_R/slong.png" xml:id="ubatRup"/>
         </char>
         <char xml:id="stironien_R">
           <desc>LATIN ABBREVIATION SIGN SMALL ET</desc>
           <mapping type="MUFI">⁊</mapping>
           <mapping type="decimal">⁊</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Ms_R/stironien.png" xml:id="rzUPWFj"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Ms_R/stironien.png" xml:id="e8hfZGm"/>
         </char>
         <char xml:id="utilde_R">
           <desc>LATIN SMALL LETTER U WITH TILDE</desc>
           <mapping type="PUA">U+0169</mapping>
           <mapping type="decimal">ũ</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Ms_R/utilde.png" xml:id="kUCdf0r"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Ms_R/utilde.png" xml:id="iyX5Ynq"/>
         </char>
         <char xml:id="ypoint_R">
           <desc>LATIN SMALL LETTER Y WITH DOT ABOVE</desc>
           <mapping type="decimal">ẏ</mapping>
-          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Ms_R/ypoint.png" xml:id="rHe5nrR"/>
+          <graphic url="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/abreviations_glyphes/Ms_R/ypoint.png" xml:id="j4FhtG0"/>
         </char>
       </charDecl>
     </encodingDesc>
@@ -110,32 +98,52 @@
   <text>
     <body>
       <div type="livre" n="3" xml:id="Sev_R_3">
-        <milestone type="folio" unit="debut_partie" facs="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/Sev_R/pg_0001.pdf" n="ccxlv v" xml:id="nv9kmKf"/>
+        <milestone type="folio" unit="debut_partie" facs="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/Sev_R/pg_0001.pdf" n="ccxlv v" xml:id="wbyQUDH"/>
         <div type="partie" n="3" xml:id="Sev_R_3_3">
-          <div type="chapitre" n="4" xml:id="Sev_R_3_3_4">
-            <head n="OucihnEJKk">
-              <w lemma="capítulo" pos="NCMS000" ana="#annotation_manuelle" xml:id="ikePPIE">Capítulo</w>
-              <w lemma="4" ana="#annotation_manuelle" xml:id="tmQivLK">iiii°</w>
-              <pc xml:id="jZf4Xcj">,</pc>
-              <w lemma="do" pos="RG" ana="#annotation_manuelle" xml:id="kfePNr8">do</w>
-              <w xml:id="cED6Ql1">muestra</w>
-              <w xml:id="jeik1R6">quáles</w>
-              <w xml:id="qwgBzHj">e</w>
-              <w xml:id="aYnIyrL">quántas</w>
-              <w xml:id="cB7d4pz">cosas</w>
-              <w xml:id="mx2At7w">son</w>
-              <w xml:id="taSawr3">que</w>
-              <w xml:id="vDhaTSu">deven</w>
-              <w xml:id="mYUMX80">aver</w>
-              <w xml:id="ifhnKLl">los</w>
-              <w xml:id="nFPc2vu">lidiadores</w>
-              <w xml:id="r9oGeUv">para</w>
-              <w xml:id="hXXcQrg">que</w>
-              <w xml:id="lIXPPW1">puedan</w>
-              <w xml:id="hG7nZAA">bien</w>
-              <w xml:id="h37U3rT">lidiar</w>
-              <pc xml:id="eO9bhoh">.</pc>
-            </head>
+          <div type="chapitre" n="22" xml:id="Sev_R_3_3_22">
+            <div type="traduction">
+              <p n="JijdHudsajJ">
+                <w xml:id="jwFqj1i">El</w>
+                <w lemma="3" pos="AO0MS0" ana="#annotation_manuelle" xml:id="fcClkhA">iii°</w>
+                <w xml:id="f0Ib5ty">es</w>
+                <w xml:id="w26lEp3">faziendo</w>
+                <w xml:id="eVMRBVm">saetas</w>
+                <unclear>
+                  <w xml:id="pVpuipL">que</w>
+                </unclear>
+                <space facs="/home/mgl/Bureau/These/Edition/hyperregimiento-de-los-principes/Dedans/Facsimiles/Sev_R/espace_r_22.png" xml:id="kmKVrYS"/>
+                <w synch="#KVwFKYitEks" ana="#annotation_manuelle" xml:id="uktYLAx">ruecas</w>
+                <pc xml:id="aRHRNuh">,</pc>
+                <w xml:id="zf36HzP">e</w>
+                <w synch="#sfBPvEJTxj" ana="#annotation_manuelle" xml:id="f5PYA8o">éstas</w>
+                <w xml:id="eT5f6i0">en</w>
+                <w lemma="medio" pos="NCMS000" ana="#annotation_manuelle" xml:id="egnbADd">medio</w>
+                <w lemma="hueco" pos="AQ0FP0" ana="#annotation_manuelle" xml:id="wxXrfUk">huecas</w>
+                <pc xml:id="xBXZUU3">,</pc>
+                <w xml:id="lsz97R9">e</w>
+                <w xml:id="sOYUEkk">allý</w>
+                <w lemma="deber" pos="VMIP3P0" ana="#annotation_manuelle" xml:id="zgDNvfl">deven</w>
+                <w xml:id="sqYYcgQ">poner</w>
+                <w xml:id="yPr3A7O">fuerte</w>
+                <w xml:id="oU8pyrh">fuego</w>
+                <w lemma="hacer" pos="VMP00SM" ana="#annotation_manuelle" xml:id="x4BCVFR">fecho</w>
+                <w xml:id="fMHHcNf">de</w>
+                <w xml:id="ai91LA1">olio</w>
+                <w xml:id="yC7KqEx">e</w>
+                <w xml:id="vtIjIIu">de</w>
+                <w xml:id="sTxJxOI">piedra</w>
+                <w lemma="azufre" pos="NCMS000" ana="#annotation_manuelle" xml:id="pXhoPzA">sufre</w>
+                <pc xml:id="ji4Fvem">,</pc>
+                <w xml:id="lzIy1m5">e</w>
+                <w xml:id="wTHMBJi">de</w>
+                <w xml:id="q1h8hIY">pez</w>
+                <pc xml:id="yEKIuYk">,</pc>
+                <w xml:id="aq7wHeN">e</w>
+                <w xml:id="kgyfmKp">de</w>
+                <w xml:id="eqDomf3">resina</w>
+                <pc xml:id="qxfkjw9">.</pc>
+              </p>
+            </div>
           </div>
         </div>
       </div>
