@@ -1,7 +1,6 @@
 import os
 import shutil
 
-from halo import Halo
 import glob
 import subprocess
 from lxml import etree
@@ -95,9 +94,8 @@ def fusion_documents_tei(chemin_fichiers, chemin_corpus, xpath_transcriptions, o
 
 def tableau_alignement(saxon, chemin):
     xsl_apparat = 'xsl/post_alignement/tableau_alignement.xsl'
-    with Halo(text='Création du tableau d\'alignement', spinner='dots'):
-        cmd = f'java -jar {saxon} -o:{chemin}/tableau_alignement.html {chemin}/aligne_regroupe.xml {xsl_apparat}'
-        subprocess.run(cmd.split())
+    cmd = f'java -jar {saxon} -o:{chemin}/tableau_alignement.html {chemin}/aligne_regroupe.xml {xsl_apparat}'
+    subprocess.run(cmd.split())
     print('Création du tableau d\'alignement ✓')
 
 
