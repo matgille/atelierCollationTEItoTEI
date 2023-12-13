@@ -4,7 +4,6 @@ import re
 import shutil
 import time
 import json
-from halo import Halo
 import subprocess
 import glob
 import logging
@@ -157,15 +156,6 @@ def main():
 
     # We start by removing all debug files
     utils.remove_debug_files()
-    if parametres.prevalidation:
-        corpus = parametres.corpus_path
-        schema_sch = "python/tests/validator.sch"
-        if not tests.validation_xml(corpus, schema_sch)[0]:
-            print("Une erreur fatale est apparue. Merci de vérifier l'encodage.")
-            print(f"Erreurs: {';'.join(element.text for element in tests.validation_xml(corpus, schema_sch)[1])}")
-            exit(1)
-        else:
-            pass
 
     if tokenize_only:
         tokeniser = tokenisation.Tokenizer(saxon,
@@ -278,31 +268,31 @@ def main():
             json.dump(dictionnaire_sortie, out_json_file)
 
         # On compare les lieux variants et on en déduit les <app>
-        with Halo(text='Création des apparats', spinner='dots'):
-            # Étape suivante: transformer le JSON en xml. Pour cela on peut utiliser dict2xml.
-            chemin_alignement = f"{chemin_fichiers}/alignement_collatex.xml"
-            with open(chemin_alignement, "w+") as sortie_xml:
-                with open(chemin_fichier_json, 'r') as fichier_json_a_xmliser:
-                    obj = json.loads(fichier_json_a_xmliser.read())
-                    vers_xml = dicttoxml.dicttoxml(obj).decode("utf-8")
-                sortie_xml.write(vers_xml)
+        print('Création des apparats')
+        # Étape suivante: transformer le JSON en xml. Pour cela on peut utiliser dict2xml.
+        chemin_alignement = f"{chemin_fichiers}/alignement_collatex.xml"
+        with open(chemin_alignement, "w+") as sortie_xml:
+            with open(chemin_fichier_json, 'r') as fichier_json_a_xmliser:
+                obj = json.loads(fichier_json_a_xmliser.read())
+                vers_xml = dicttoxml.dicttoxml(obj).decode("utf-8")
+            sortie_xml.write(vers_xml)
 
-            chemin_regroupement = "xsl/post_alignement/regroupement.xsl"
-            # Regroupement des lieux variants (témoin A puis témoin B puis témoin C
-            # > lieu variant 1: A, B, C ; lieu variant 2: A, B, C)
-            cmd = f"java -jar {saxon} -o:{chemin_fichiers}/aligne_regroupe.xml {chemin_fichiers}/alignement_collatex.xml " \
-                  f"{chemin_regroupement}"
-            subprocess.run(cmd.split())
+        chemin_regroupement = "xsl/post_alignement/regroupement.xsl"
+        # Regroupement des lieux variants (témoin A puis témoin B puis témoin C
+        # > lieu variant 1: A, B, C ; lieu variant 2: A, B, C)
+        cmd = f"java -jar {saxon} -o:{chemin_fichiers}/aligne_regroupe.xml {chemin_fichiers}/alignement_collatex.xml " \
+              f"{chemin_regroupement}"
+        subprocess.run(cmd.split())
 
-            # C'est à ce niveau que l'étape de correction devrait avoir lieu. Y réfléchir.
-            # Création de l'apparat: transformation de aligne_regroupe.xml en JSON
-            chemin_xsl_apparat = "xsl/post_alignement/creation_apparat.xsl"
-            cmd = f"java -jar {saxon} -o:{chemin_fichiers}/apparat_final.json {chemin_fichiers}/aligne_regroupe.xml " \
-                  f"{chemin_xsl_apparat}"
-            subprocess.run(cmd.split())
-            # Création de l'apparat: suppression de la redondance, identification des lieux variants,
-            # regroupement des lemmes
-            # Création du tableau d'alignement pour visualisation
+        # C'est à ce niveau que l'étape de correction devrait avoir lieu. Y réfléchir.
+        # Création de l'apparat: transformation de aligne_regroupe.xml en JSON
+        chemin_xsl_apparat = "xsl/post_alignement/creation_apparat.xsl"
+        cmd = f"java -jar {saxon} -o:{chemin_fichiers}/apparat_final.json {chemin_fichiers}/aligne_regroupe.xml " \
+              f"{chemin_xsl_apparat}"
+        subprocess.run(cmd.split())
+        # Création de l'apparat: suppression de la redondance, identification des lieux variants,
+        # regroupement des lemmes
+        # Création du tableau d'alignement pour visualisation
         if parametres.tableauxAlignement:
             sorties.tableau_alignement(saxon, chemin_fichiers)
         if not tests.test_lemmatization(div_n=i,
